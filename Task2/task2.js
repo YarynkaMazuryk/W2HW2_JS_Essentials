@@ -1,5 +1,5 @@
 function outPutNumbers(number) {
-    if (number >= 0) { 
+    if (number >= 1) { 
         console.log(number--);
         return outPutNumbers(number);
     }   

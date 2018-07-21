@@ -1,47 +1,48 @@
 const users = {
-    firstUser: {
-        name: 'Roman',
-        lastName: 'Lurov',
-        otherData: {
-            role: 'student'
-        }
+    1: {
+      name: 'Roman',
+      lastName: 'Lurov',
+      otherData: {
+        role: 'student'
+      }
     },
-    secondUser: {
-        name: 'Ivan',
-        lastName: 'Bondarenko',
-        otherData: {
-            role: 'student'
-        }
+    2: {
+      name: 'Ivan',
+      lastName: 'Bondarenko',
+      otherData: {
+        role: 'student'
+      }
     },
-    thirdUser: {
-        name: 'Roman',
-        lastName: 'Lurov',
-        otherData: {
-            role: 'student'
-        }
+    3: {
+      name: 'Roman',
+      lastName: 'Lurov',
+      otherData: {
+        role: 'student'
+      }
     },
-
-    fourthUser: {
-        name: 'Oleg',
-        lastName: 'Murko',
-        otherData: {
-            role: 'student'
-        }
+    
+    4: {
+      name: 'Oleg',
+      lastName: 'Murko',
+      otherData: {
+        role: 'student'
+      }
     },
-    fifthUser: {
-        name: 'Kurz',
-        lastName: 'Smith',
-        otherData: {
-            role: 'student'
-        }
+    5: {
+      name: 'Kurz',
+      lastName: 'Smith'
     },
-};
-for (let key in users) {
+  };
+  
+  Object.keys(users).forEach(function(key) {
     const user = users[key];
-    console.log(user);
-    if (user) {
-        console.log('name: ', user.name);
-        console.log('last name: ', user.lastName);
-        console.log('role: ', user.otherData.role)
+    
+    if(user) {
+       console.log('name: ', user.name);
+       console.log('last name: ', user.lastName);
+    
+    if(user.otherData) {
+        console.log('role: ', user.otherData.role);
+    }  
     }
-};
+  })

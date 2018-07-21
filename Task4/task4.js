@@ -1,20 +1,7 @@
-
-let arraySym = ["#"];
-function addSymbol(numbers,arraySymbols) {
-    for (let i = 0; i < numbers; i++) {
-        console.log(arraySymbols.join(''));
-        arraySymbols.push("#");
+function repeatSymbols (symbols,repeat) {
+    for (let i = 1; i < repeat; i++) {
+        console.log(symbols.repeat(i));
     }
 }
-addSymbol(7,arraySym);
+repeatSymbols("#",8);
 
-
-let arrSymRec = ["#"];
-function addSymbolRec(numbers,arraySymbols) {
-    if (numbers > 0) {
-        console.log(arraySymbols.join(""));
-        arraySymbols.push("#");
-        return addSymbolRec(numbers - 1,arraySymbols);
-    }
-}
-addSymbolRec(7,arrSymRec);
